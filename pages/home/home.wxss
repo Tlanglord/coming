@@ -1,0 +1,10 @@
+/* pages/home/home.wxss */
+.home-sw-cantianer{
+  height: 100vh;
+  width: 100%;
+}
+
+.slide-image{
+  height: 100vh;
+  width: 100%;
+}
