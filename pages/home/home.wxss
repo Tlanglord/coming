@@ -1,67 +1,108 @@
 /* pages/home/home.wxss */
-.home-sw-cantianer{
+
+.home-sw-cantianer {
   height: 100vh;
   width: 100%;
 }
 
-.slide-image{
+.slide-image {
   height: 100vh;
   width: 100%;
 }
 
-.slide-animation{
-  animation: fadin 3s
+.slide-animation {
+  animation: fadin 3s;
 }
 
-@keyframes fadin{
-  0%{
-    opacity: 0
+@keyframes fadin {
+  0% {
+    opacity: 0;
   }
-  50%{
-    opacity: 0.5
+
+  50% {
+    opacity: 0.5;
   }
-  100%{
-    opacity: 1
+
+  100% {
+    opacity: 1;
   }
 }
 
-.background_music{
+.background_music {
   position: fixed;
   top: 20rpx;
   right: 10rpx;
   z-index: 10001;
   width: 100rpx;
 }
-.musicImg{
+
+.musicImg {
   width: 60rpx;
   height: 60rpx;
 }
-.music_icon{
-  animation:musicRotate 3s linear infinite;
+
+.music_icon {
+  animation: musicRotate 3s linear infinite;
 }
-.music_play{
-  width:28rpx;
+
+.music_play {
+  width: 28rpx;
   height: 60rpx;
-  margin-left:-5px;
+  margin-left: -5px;
   transform-origin: top;
-  -webkit-transform:rotate(20deg)
+  -webkit-transform: rotate(20deg);
 }
-.playImg{
-  animation:musicStop 1s linear forwards ;
+
+.playImg {
+  animation: musicStop 1s linear forwards;
 }
-.pauseImg{
-  animation:musicStart 1s linear forwards ;
+
+.pauseImg {
+  animation: musicStart 1s linear forwards;
 }
-@-webkit-keyframes musicRotate{
-from{-webkit-transform:rotate(0deg);}
-to{-webkit-transform:rotate(360deg);}
+
+@-webkit-keyframes musicRotate {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg);
+  }
 }
-@-webkit-keyframes musicStop{
-from{-webkit-transform:rotate(20deg);}
-to{-webkit-transform:rotate(0deg);}
+
+@-webkit-keyframes musicStop {
+  from {
+    -webkit-transform: rotate(20deg);
+  }
+
+  to {
+    -webkit-transform: rotate(0deg);
+  }
 }
-@-webkit-keyframes musicStart{
-from{-webkit-transform:rotate(0deg);}
-to{-webkit-transform:rotate(20deg);}
+
+@-webkit-keyframes musicStart {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(20deg);
+  }
 }
-.music_stop{width:4em;display:none;}
+
+.music_stop {
+  width: 4em;
+  display: none;
+}
+
+.home-to-anim {
+  position: fixed;
+  width: auto;
+  height: 50rpx;
+  right: 50rpx;
+  top: 90rpx;
+  text-align: center;
+  z-index: 10002;
+  line-height: 50rpx;
+}

@@ -12,13 +12,17 @@
       <image src="/images/music/music_play.png" class="music_play playImg" />
     </view>
   </view>
+
+  <button class='home-to-anim' bindtap='onAnimBtnClick'>anim</button>
 </view>
+
+
 
 <swiper class='home-sw-cantianer' indicator-dots="{{indicatorDots}}" vertical="true" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}">
   <swiper-item class="slide-animation">
     <image src="{{imgUrls[0]}}" class="slide-image" />
     <view>
-    <image src='{{animationImg.title}}'></image>
+      <image src='{{animationImg.title}}'></image>
     </view>
   </swiper-item>
   <!--<block wx:for="{{imgUrls}}" wx:key="{{index}}">

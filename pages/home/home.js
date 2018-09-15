@@ -95,7 +95,6 @@ Page({
       "title": "我们结婚啦",
       "imageUrl": "http://pic.qiantucdn.com/58pic/19/29/54/82M58PICK2q_1024.jpg"
     }
-
     return share;
   },
   play: function(event) {
@@ -115,5 +114,13 @@ Page({
         isPlayingMusic: true
       })
     }
+  },
+
+  onAnimBtnClick(){
+    console.log("onAnimBtnClick");
+    wx.navigateTo({
+      url: '../anim/anim',
+    })
   }
+
 })
