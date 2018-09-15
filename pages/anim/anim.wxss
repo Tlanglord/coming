@@ -1,0 +1,12 @@
+/* pages/anim/anim.wxss */
+.anim-cantainer{
+  height: 100vh;
+}
+
+.anim-text{
+  height: 80%;
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 10vh;
+  background: #4499ff;
+}
