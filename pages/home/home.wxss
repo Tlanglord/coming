@@ -9,6 +9,22 @@
   width: 100%;
 }
 
+.slide-animation{
+  animation: fadin 3s
+}
+
+@keyframes fadin{
+  0%{
+    opacity: 0
+  }
+  50%{
+    opacity: 0.5
+  }
+  100%{
+    opacity: 1
+  }
+}
+
 .background_music{
   position: fixed;
   top: 20rpx;

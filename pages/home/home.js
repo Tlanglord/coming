@@ -17,20 +17,32 @@ Page({
       './../../images/album/ab_8.jpeg',
       './../../images/album/ab_9.jpeg'
     ],
+    animationImg:{
+      smallStars:'./../../images/animationImg/smallStars.png',
+      star: './../.../images/animationImg/star.png',
+      star1: './../../images/animationImg/star1.png',
+      star2: './../../images/animationImg/star2.png',
+      stars: './../../images/animationImg/stars.png',
+      title: './../../images/animationImg/title.jpg',
+    },
     indicatorDots: false,
     isPlayingMusic: true,
-    music_url: "http://dl.stream.qqmusic.qq.com/C100000gSW7F2IKT1w.m4a?fromtag=46"
+    music_url: "http://dl.stream.qqmusic.qq.com/C100000gSW7F2IKT1w.m4a?fromtag=46",
+    autoplay:true,
+    interval:3000,
+    duration:1000,
+    circular:true
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-    wx.playBackgroundAudio({
+    /*wx.playBackgroundAudio({
       dataUrl: "http://dl.stream.qqmusic.qq.com/C100000gSW7F2IKT1w.m4a?fromtag=46",
       title: '',
       coverImgUrl: ''
-    })
+    })*/
   },
 
   /**
