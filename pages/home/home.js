@@ -6,17 +6,16 @@ Page({
    */
   data: {
     anim: {},
-    autoplay: false,
     imgUrls: [
       './../../images/album/ab_1.jpeg',
       './../../images/album/ab_2.jpeg',
       './../../images/album/ab_3.jpeg',
-      './../../images/album/ab_4.jpeg',
-      './../../images/album/ab_5.jpeg',
-      './../../images/album/ab_6.jpeg',
-      './../../images/album/ab_7.jpeg',
-      './../../images/album/ab_8.jpeg',
-      './../../images/album/ab_9.jpeg'
+      // './../../images/album/ab_4.jpeg',
+      // './../../images/album/ab_5.jpeg',
+      // './../../images/album/ab_6.jpeg',
+      // './../../images/album/ab_7.jpeg',
+      // './../../images/album/ab_8.jpeg',
+      // './../../images/album/ab_9.jpeg'
     ],
     animationImg: {
       smallStars: './../../images/animationImg/smallStars.png',
@@ -31,10 +30,10 @@ Page({
     indicatorDots: false,
     isPlayingMusic: true,
     music_url: "http://dl.stream.qqmusic.qq.com/C100000gSW7F2IKT1w.m4a?fromtag=46",
-    autoplay: true,
+    autoplay: false,
     interval: 3000,
     duration: 1000,
-    circular: true
+    circular: false,
   },
 
   /**
@@ -64,6 +63,30 @@ Page({
     this.setData({
       anim: animation.export()
     })
+
+    let n = 0;
+    let m = false;
+    this.that = this
+    setInterval(function() {
+      let that = this
+      let run = this.startAnim
+      console.log("startAnim : " + run)
+      console.log("lastIndex : " + this.lastIndex)
+      if (run) {
+        that.startAnim = false;
+        n = n + 1;
+        if (m) {
+          this.animation.rotate(360 * (n)).scale(1.2, 1.2).step()
+          m = !m;
+        } else {
+          this.animation.rotate(360 * (n)).scale(1, 1).step()
+          m = !m;
+        }
+        this.setData({
+          anim: this.animation.export()
+        })
+      }
+    }.bind(this), 1000)
   },
 
   /**
@@ -131,21 +154,7 @@ Page({
     }
   },
   onSwiperItemChange(event) {
-    console.log(event.detail.current);
-    console.log(event.detail.source);
-
-    var animation = wx.createAnimation({
-      duration: 1000,
-      timingFunction: 'ease',
-    })
-
-    this.animation = animation
-
-    animation.rotate(360).step()
-
-    this.setData({
-      anim: animation.export()
-    })
+    this.lastIndex = event.detail.current;
+    this.startAnim = true;
   }
-
 })

@@ -6,8 +6,8 @@
     "pages/anim/anim"
   ],
   "window": {
-    "backgroundTextStyle": "#A81920",
-    "navigationBarBackgroundColor": "#A81920",
+    "backgroundTextStyle": "#77A2B5",
+    "navigationBarBackgroundColor": "#77A2B5",
     "navigationBarTitleText": "",
     "navigationBarTextStyle": "#fff"
   }
