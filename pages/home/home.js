@@ -5,8 +5,6 @@ Page({
    * 页面的初始数据
    */
   data: {
-    anim: {},
-    autoplay: false,
     imgUrls: [
       './../../images/album/ab_1.jpeg',
       './../../images/album/ab_2.jpeg',
@@ -20,11 +18,7 @@ Page({
     ],
     animationImg: {
       smallStars: './../../images/animationImg/smallStars.png',
-<<<<<<< HEAD
       star: './../../images/animationImg/star.png',
-=======
-      star: './../.../images/animationImg/star.png',
->>>>>>> c112b0270c666556e1e90f38c7fa42e67a735472
       star1: './../../images/animationImg/star1.png',
       star2: './../../images/animationImg/star2.png',
       stars: './../../images/animationImg/stars.png',
@@ -35,7 +29,7 @@ Page({
     indicatorDots: false,
     isPlayingMusic: true,
     music_url: "http://dl.stream.qqmusic.qq.com/C100000gSW7F2IKT1w.m4a?fromtag=46",
-    autoplay: true,
+    autoplay: false,
     interval: 3000,
     duration: 1000,
     circular: true
