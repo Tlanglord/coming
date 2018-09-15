@@ -5,6 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    anim: {},
     autoplay: false,
     imgUrls: [
       './../../images/album/ab_1.jpeg',
@@ -17,21 +18,23 @@ Page({
       './../../images/album/ab_8.jpeg',
       './../../images/album/ab_9.jpeg'
     ],
-    animationImg:{
-      smallStars:'./../../images/animationImg/smallStars.png',
-      star: './../.../images/animationImg/star.png',
+    animationImg: {
+      smallStars: './../../images/animationImg/smallStars.png',
+      star: './../../images/animationImg/star.png',
       star1: './../../images/animationImg/star1.png',
       star2: './../../images/animationImg/star2.png',
       stars: './../../images/animationImg/stars.png',
+      stars2: './../../images/animationImg/stars2.png',
       title: './../../images/animationImg/title.jpg',
+      bg: './../../images/animationImg/bg.jpg',
     },
     indicatorDots: false,
     isPlayingMusic: true,
     music_url: "http://dl.stream.qqmusic.qq.com/C100000gSW7F2IKT1w.m4a?fromtag=46",
-    autoplay:true,
-    interval:3000,
-    duration:1000,
-    circular:true
+    autoplay: true,
+    interval: 3000,
+    duration: 1000,
+    circular: true
   },
 
   /**
@@ -49,7 +52,18 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function() {
+    var animation = wx.createAnimation({
+      duration: 1000,
+      timingFunction: 'ease',
+    })
 
+    this.animation = animation
+
+    animation.rotate(360).step()
+
+    this.setData({
+      anim: animation.export()
+    })
   },
 
   /**
@@ -93,7 +107,7 @@ Page({
   onShareAppMessage: function() {
 
   },
-  play: function (event) {
+  play: function(event) {
     if (this.data.isPlayingMusic) {
       wx.pauseBackgroundAudio();
       this.setData({
@@ -110,5 +124,22 @@ Page({
         isPlayingMusic: true
       })
     }
+  },
+  onSwiperItemChange(event) {
+    console.log(event.detail.current);
+    console.log(event.detail.source);
+
+    var animation = wx.createAnimation({
+      duration: 1000,
+      timingFunction: 'ease',
+    })
+
+    this.animation = animation
+
+    animation.rotate(360).step()
+
+    this.setData({
+      anim: animation.export()
+    })
   }
 })
