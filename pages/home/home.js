@@ -70,7 +70,11 @@ Page({
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function() {
+  onShareAppMessage: function(res) {
+    console.log(res.from);
 
+    let share = { "title": "我们结婚啦", "imageUrl":"http://pic.qiantucdn.com/58pic/19/29/54/82M58PICK2q_1024.jpg'"};
+
+    return share;
   }
 })
