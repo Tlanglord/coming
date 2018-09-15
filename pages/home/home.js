@@ -20,7 +20,11 @@ Page({
     ],
     animationImg: {
       smallStars: './../../images/animationImg/smallStars.png',
+<<<<<<< HEAD
       star: './../../images/animationImg/star.png',
+=======
+      star: './../.../images/animationImg/star.png',
+>>>>>>> c112b0270c666556e1e90f38c7fa42e67a735472
       star1: './../../images/animationImg/star1.png',
       star2: './../../images/animationImg/star2.png',
       stars: './../../images/animationImg/stars.png',
@@ -105,7 +109,12 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function() {
+    let share = {
+      "title": "我们结婚啦",
+      "imageUrl": "http://pic.qiantucdn.com/58pic/19/29/54/82M58PICK2q_1024.jpg"
+    }
 
+    return share;
   },
   play: function(event) {
     if (this.data.isPlayingMusic) {
