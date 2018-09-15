@@ -15,14 +15,20 @@ Page({
       './../../images/album/ab_6.jpg',
       './../../images/album/ab_7.jpg'
     ],
-    indicatorDots: false
+    indicatorDots: false,
+    isPlayingMusic: true,
+    music_url: "http://dl.stream.qqmusic.qq.com/C100000gSW7F2IKT1w.m4a?fromtag=46"
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-
+    wx.playBackgroundAudio({
+      dataUrl: "http://dl.stream.qqmusic.qq.com/C100000gSW7F2IKT1w.m4a?fromtag=46",
+      title: '',
+      coverImgUrl: ''
+    })
   },
 
   /**
@@ -72,5 +78,23 @@ Page({
    */
   onShareAppMessage: function() {
 
+  },
+  play: function (event) {
+    if (this.data.isPlayingMusic) {
+      wx.pauseBackgroundAudio();
+      this.setData({
+        isPlayingMusic: false
+      })
+    } else {
+      console.log('this.data.music_url', this.data.music_url)
+      wx.playBackgroundAudio({
+        dataUrl: this.data.music_url,
+        title: '',
+        coverImgUrl: ''
+      })
+      this.setData({
+        isPlayingMusic: true
+      })
+    }
   }
 })
