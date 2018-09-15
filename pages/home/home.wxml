@@ -16,18 +16,44 @@
   <button class='home-to-anim' bindtap='onAnimBtnClick'>anim</button>
 </view>
 
-
-
-<swiper class='home-sw-cantianer' indicator-dots="{{indicatorDots}}" vertical="true" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}">
-  <swiper-item class="slide-animation">
-    <image src="{{imgUrls[0]}}" class="slide-image" />
-    <view>
-      <image src='{{animationImg.title}}'></image>
+<swiper bindchange="onSwiperItemChange" class='home-sw-cantianer' indicator-dots="{{indicatorDots}}" vertical="true" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}">
+  <!--<swiper-item class="slide-animation">
+    <image src='{{animationImg.bg}}' class='home-sw-item-bg' />
+    <image src='{{animationImg.smallStars}}' class='a-star smallStars' />
+    <image src='{{animationImg.stars}}' class='a-star stars1' />
+    <image src='{{animationImg.stars2}}' class='a-star stars2' />
+    <image src='{{animationImg.star}}' class='a-star star' />
+    <image src='{{animationImg.star1}}' class='a-star star1' />
+    <image src='{{animationImg.star2}}' class='a-star star2' />
+    <view class='home-sw-item-box'>
+      <image src="{{imgUrls[0]}}" class="slide-image" />
+      <view>
+        <image src='{{animationImg.title}}'></image>
+      </view>
     </view>
-  </swiper-item>
-  <!--<block wx:for="{{imgUrls}}" wx:key="{{index}}">
+
+
+  </swiper-item>-->
+  <block wx:for="{{imgUrls}}" wx:key="{{index}}">
     <swiper-item class="slide-animation">
-      <image src="{{item}}" class="slide-image" />
+      <image src='{{animationImg.bg}}' class='home-sw-item-bg' />
+      <image animation="{{anim}}" src='{{animationImg.smallStars}}' class='a-star smallStars' />
+      <image animation="{{anim}}" src='{{animationImg.stars}}' class='a-star stars1' />
+      <image animation="{{anim}}" src='{{animationImg.stars2}}' class='a-star stars2' />
+      <image animation="{{anim}}" src='{{animationImg.star}}' class='a-star star' />
+      <image animation="{{anim}}" src='{{animationImg.star1}}' class='a-star star1' />
+      <image animation="{{anim}}" src='{{animationImg.star2}}' class='a-star star2' />
+      <view class='home-sw-item-box'>
+        <image src="{{item}}" class="slide-image" />
+        <view>
+          <image src='{{animationImg.title}}'></image>
+        </view>
+      </view>
+
+
     </swiper-item>
-  </block>-->
+    <!--<swiper-item class="slide-animation">
+      <image src="{{item}}" class="slide-image" />
+    </swiper-item>-->
+  </block>
 </swiper>

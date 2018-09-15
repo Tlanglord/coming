@@ -5,6 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    anim: {},
     autoplay: false,
     imgUrls: [
       './../../images/album/ab_1.jpeg',
@@ -19,11 +20,17 @@ Page({
     ],
     animationImg: {
       smallStars: './../../images/animationImg/smallStars.png',
+<<<<<<< HEAD
+      star: './../../images/animationImg/star.png',
+=======
       star: './../.../images/animationImg/star.png',
+>>>>>>> c112b0270c666556e1e90f38c7fa42e67a735472
       star1: './../../images/animationImg/star1.png',
       star2: './../../images/animationImg/star2.png',
       stars: './../../images/animationImg/stars.png',
+      stars2: './../../images/animationImg/stars2.png',
       title: './../../images/animationImg/title.jpg',
+      bg: './../../images/animationImg/bg.jpg',
     },
     indicatorDots: false,
     isPlayingMusic: true,
@@ -49,7 +56,18 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function() {
+    var animation = wx.createAnimation({
+      duration: 1000,
+      timingFunction: 'ease',
+    })
 
+    this.animation = animation
+
+    animation.rotate(360).step()
+
+    this.setData({
+      anim: animation.export()
+    })
   },
 
   /**
@@ -95,6 +113,7 @@ Page({
       "title": "我们结婚啦",
       "imageUrl": "http://pic.qiantucdn.com/58pic/19/29/54/82M58PICK2q_1024.jpg"
     }
+
     return share;
   },
   play: function(event) {
@@ -115,12 +134,22 @@ Page({
       })
     }
   },
+  onSwiperItemChange(event) {
+    console.log(event.detail.current);
+    console.log(event.detail.source);
 
-  onAnimBtnClick(){
-    console.log("onAnimBtnClick");
-    wx.navigateTo({
-      url: '../anim/anim',
+    var animation = wx.createAnimation({
+      duration: 1000,
+      timingFunction: 'ease',
     })
-  }
+
+    this.animation = animation
+
+    animation.rotate(360).step()
+
+    this.setData({
+      anim: animation.export()
+    })
+  }，
 
 })

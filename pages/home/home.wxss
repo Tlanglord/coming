@@ -6,7 +6,7 @@
 }
 
 .slide-image {
-  height: 100vh;
+  height: 100%;
   width: 100%;
 }
 
@@ -26,6 +26,67 @@
   100% {
     opacity: 1;
   }
+}
+
+.home-sw-item-box {
+  width: 85%;
+  height: 90%;
+  margin: 0 auto;
+  background-color: #fff;
+  position: relative;
+  top: 30px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.home-sw-item-bg {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+}
+
+.a-star {
+  position: absolute;
+  z-index: 1;
+}
+
+.smallStars {
+  z-index: 0;
+}
+
+.star {
+  width: 80px;
+  height: 80px;
+}
+@keyframes starAni{
+  0%{
+    
+  }
+}
+
+.stars1 {
+  width: 140px;
+  height: 140px;
+}
+
+.stars2 {
+  width: 140px;
+  height: 140px;
+  bottom: 0px;
+  right: 0px;
+}
+
+.star1 {
+  width: 100px;
+  height: 100px;
+  bottom: 0px;
+}
+
+.star2 {
+  width: 100px;
+  height: 100px;
+  bottom: 75px;
+  right: 0px;
 }
 
 .background_music {
@@ -95,7 +156,6 @@
   width: 4em;
   display: none;
 }
-
 .home-to-anim {
   position: fixed;
   width: auto;
