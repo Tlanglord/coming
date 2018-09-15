@@ -20,11 +20,7 @@ Page({
     ],
     animationImg: {
       smallStars: './../../images/animationImg/smallStars.png',
-<<<<<<< HEAD
       star: './../../images/animationImg/star.png',
-=======
-      star: './../.../images/animationImg/star.png',
->>>>>>> c112b0270c666556e1e90f38c7fa42e67a735472
       star1: './../../images/animationImg/star1.png',
       star2: './../../images/animationImg/star2.png',
       stars: './../../images/animationImg/stars.png',
@@ -150,6 +146,6 @@ Page({
     this.setData({
       anim: animation.export()
     })
-  }，
+  }
 
 })
