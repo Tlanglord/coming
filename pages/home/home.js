@@ -7,13 +7,13 @@ Page({
   data: {
     autoplay: false,
     imgUrls: [
-      '/../../images/album/ab_1.jpg',
-      '/../../images/album/ab_2.jpg',
-      '/../../images/album/ab_3.jpg',
-      '/../../images/album/ab_4.jpg',
-      '/../../images/album/ab_5.jpg',
-      '/../../images/album/ab_6.jpg',
-      '/../../images/album/ab_7.jpg'
+      './../../images/album/ab_1.jpg',
+      './../../images/album/ab_2.jpg',
+      './../../images/album/ab_3.jpg',
+      './../../images/album/ab_4.jpg',
+      './../../images/album/ab_5.jpg',
+      './../../images/album/ab_6.jpg',
+      './../../images/album/ab_7.jpg'
     ],
     indicatorDots: false
   },
