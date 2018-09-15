@@ -17,8 +17,8 @@ Page({
       './../../images/album/ab_8.jpeg',
       './../../images/album/ab_9.jpeg'
     ],
-    animationImg:{
-      smallStars:'./../../images/animationImg/smallStars.png',
+    animationImg: {
+      smallStars: './../../images/animationImg/smallStars.png',
       star: './../.../images/animationImg/star.png',
       star1: './../../images/animationImg/star1.png',
       star2: './../../images/animationImg/star2.png',
@@ -28,10 +28,10 @@ Page({
     indicatorDots: false,
     isPlayingMusic: true,
     music_url: "http://dl.stream.qqmusic.qq.com/C100000gSW7F2IKT1w.m4a?fromtag=46",
-    autoplay:true,
-    interval:3000,
-    duration:1000,
-    circular:true
+    autoplay: true,
+    interval: 3000,
+    duration: 1000,
+    circular: true
   },
 
   /**
@@ -91,9 +91,14 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function() {
+    let share = {
+      "title": "我们结婚啦",
+      "imageUrl": "http://pic.qiantucdn.com/58pic/19/29/54/82M58PICK2q_1024.jpg"
+    }
 
+    return share;
   },
-  play: function (event) {
+  play: function(event) {
     if (this.data.isPlayingMusic) {
       wx.pauseBackgroundAudio();
       this.setData({
