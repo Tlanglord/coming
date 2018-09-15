@@ -14,11 +14,16 @@
   </view>
 </view>
 
-<swiper class='home-sw-cantianer' indicator-dots="{{indicatorDots}}" vertical="true"
-  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
-  <block wx:for="{{imgUrls}}" wx:key="{{index}}">
-    <swiper-item>
+<swiper class='home-sw-cantianer' indicator-dots="{{indicatorDots}}" vertical="true" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}">
+  <swiper-item class="slide-animation">
+    <image src="{{imgUrls[0]}}" class="slide-image" />
+    <view>
+    <image src='{{animationImg.title}}'></image>
+    </view>
+  </swiper-item>
+  <!--<block wx:for="{{imgUrls}}" wx:key="{{index}}">
+    <swiper-item class="slide-animation">
       <image src="{{item}}" class="slide-image" />
     </swiper-item>
-  </block>
+  </block>-->
 </swiper>
