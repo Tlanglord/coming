@@ -1,0 +1,18 @@
+<!--pages/swipers/items/sw-item.wxml-->
+<view class='sw-item-c'>
+    <block wx:if="{{index == 0}}">
+      <sw-1/>
+    </block>
+    <block wx:elif="{{index == 1}}">
+      <sw-2/>
+    </block>
+    <block wx:elif="{{index == 2}}">
+    <sw-3/>
+    </block>
+    <block wx:elif="{{index == 3}}">
+      <sw-4/>
+    </block>
+    <block wx:elif="{{index == 4}}">
+      <sw-9/>
+    </block>
+</view>

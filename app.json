@@ -1,14 +1,13 @@
 {
   "pages": [
-    "pages/home/home",
-    "pages/index/index",
-    "pages/logs/logs",
-    "pages/anim/anim"
+    "pages/home/home"
   ],
   "window": {
     "backgroundTextStyle": "#77A2B5",
-    "navigationBarBackgroundColor": "#77A2B5",
+    "navigationBarBackgroundColor": "#90B4C4",
     "navigationBarTitleText": "",
     "navigationBarTextStyle": "#fff"
-  }
+  },
+  "disableScroll": true,
+  "enablePullDownRefresh": false
 }

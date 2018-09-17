@@ -1,0 +1,8 @@
+<!--pages/swipers/sw-3/sw-3.wxml-->
+<view class='sw-3-c'>
+  <image src="{{imgUrl}}" class='sw-3-img-1' />
+  <view class='sw-v-1'>
+    <image src="http://imgcdn.zhizuoh5.com/Uploads/syspic/scene/Fgbj_vm66VbSZ6rucCwONzu0HhXt.png" class='sw-3-img-3' />
+    <image src="{{imgUrl1}}" class='sw-3-img-2' />
+  </view>
+</view>

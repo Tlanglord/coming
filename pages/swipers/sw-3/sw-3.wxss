@@ -1,0 +1,39 @@
+/* pages/swipers/sw-3/sw-3.wxss */
+
+.sw-3-img-1 {
+  width: 100%;
+  height: 80%;
+  align-self: flex-end;
+  margin-top: 5%;
+  flex: 2;
+}
+
+.sw-3-img-2 {
+  margin-top: 20rpx;
+  height: 80%;
+  flex: 4;
+}
+
+.sw-3-img-3 {
+  height: 86rpx;
+  flex: 3;
+  align-self: flex-end;
+  margin-bottom: 20%;
+}
+
+.sw-3-c {
+  flex-direction: column;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  color: rgb(66, 141, 174);
+}
+
+.sw-v-1 {
+  flex: 3;
+  flex-direction: row;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  color: rgb(66, 141, 174);
+}

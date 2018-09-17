@@ -1,0 +1,5 @@
+<!--pages/swipers/sw-0/sw-0.wxml-->
+<view class='sw-1-c'>
+  <image src="{{imgUrl}}" class='sw-1-img' />
+  <text>对于世界而言你是一个人\n对我而言你是整个世界\n愿和你执子之手,与子偕老\n我将永远爱你</text>
+</view>

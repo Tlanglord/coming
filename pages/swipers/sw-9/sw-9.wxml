@@ -1,0 +1,9 @@
+<!--pages/swipers/sw-9/sw-9.wxml-->
+<view>
+  <image src="{{imgUrl}}" class='.sw-9-img-1'></image>
+  <view class='sw-9-txt-2'>
+    <text>\n\n敬邀您的光临</text>
+    <text>\n\n2018年10月1日</text>
+    <text>\n陕西省咸阳市武功县\n\n期待您的到来\n为我们见证这幸福美好的时刻</text>
+  </view>
+</view>

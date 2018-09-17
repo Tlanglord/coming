@@ -1,0 +1,9 @@
+<!--pages/swipers/sw-4/w-4.wxml-->
+<view class='sw-4-c'>
+  <view class='sw-v-1'>
+    <image src="{{imgUrl}}" class='sw-4-img-1' />
+    <image src="{{imgUrl1}}" class='sw-4-img-2' />
+  </view>
+  <image src="{{imgUrl2}}" class='sw-4-img-3' />
+  <image src="{{imgUrl3}}" class='sw-4-img-4' />
+</view>

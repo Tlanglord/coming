@@ -1,0 +1,6 @@
+<!--pages/swipers/wlcm/wlcm.wxml-->
+<view class='wlcm-c'>
+  <image src="{{imgUrl}}" class='wlcm-img' />
+  <image src="{{bg1}}" class='wlcm-img-1' />
+  <image src="{{bg2}}"class='wlcm-img-2' />
+</view>

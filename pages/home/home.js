@@ -1,4 +1,5 @@
 // pages/home/home.js
+var img = require('/../../utils/img.js').img;
 Page({
 
   /**
@@ -7,15 +8,8 @@ Page({
   data: {
     anim: {},
     imgUrls: [
-      './../../images/album/ab_1.jpeg',
-      './../../images/album/ab_2.jpeg',
-      './../../images/album/ab_3.jpeg',
-      // './../../images/album/ab_4.jpeg',
-      // './../../images/album/ab_5.jpeg',
+      1,2,3,4,5
       // './../../images/album/ab_6.jpeg',
-      // './../../images/album/ab_7.jpeg',
-      // './../../images/album/ab_8.jpeg',
-      // './../../images/album/ab_9.jpeg'
     ],
     animationImg: {
       smallStars: './../../images/animationImg/smallStars.png',
@@ -24,12 +18,11 @@ Page({
       star2: './../../images/animationImg/star2.png',
       stars: './../../images/animationImg/stars.png',
       stars2: './../../images/animationImg/stars2.png',
-      title: './../../images/animationImg/title.jpg',
-      bg: './../../images/animationImg/bg.jpg',
+      title: './../../images/animationImg/title.jpg'
     },
     indicatorDots: false,
-    isPlayingMusic: true,
-    music_url: "http://dl.stream.qqmusic.qq.com/C100000gSW7F2IKT1w.m4a?fromtag=46",
+    isPlayingMusic: false,
+    music_url: "http://imgcdn.zhizuoh5.com/Uploads/syspic/mp3/b18e27332c8744c0a2ebf07b08f8db27.mp3",
     autoplay: false,
     interval: 3000,
     duration: 1000,
@@ -40,11 +33,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-    /*wx.playBackgroundAudio({
-      dataUrl: "http://dl.stream.qqmusic.qq.com/C100000gSW7F2IKT1w.m4a?fromtag=46",
-      title: '',
-      coverImgUrl: ''
-    })*/
+    this.play({});
   },
 
   /**
@@ -107,7 +96,7 @@ Page({
    * 生命周期函数--监听页面卸载
    */
   onUnload: function() {
-
+     clearInterval();
   },
 
   /**
@@ -130,12 +119,13 @@ Page({
   onShareAppMessage: function() {
     let share = {
       "title": "我们结婚啦",
-      "imageUrl": "http://pic.qiantucdn.com/58pic/19/29/54/82M58PICK2q_1024.jpg"
+      "imageUrl": img.ab_7_5_4
     }
 
     return share;
   },
   play: function(event) {
+    console.log("play");
     if (this.data.isPlayingMusic) {
       wx.pauseBackgroundAudio();
       this.setData({
@@ -148,6 +138,7 @@ Page({
         title: '',
         coverImgUrl: ''
       })
+
       this.setData({
         isPlayingMusic: true
       })

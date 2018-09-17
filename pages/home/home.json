@@ -1,1 +1,8 @@
-{}
+{
+  "usingComponents": {
+    "sw-item": "./../swipers/items/sw-item",
+    "wlcm":"./../swipers/wlcm/wlcm"
+  },
+  "disableScroll": true,
+  "enablePullDownRefresh":false
+}

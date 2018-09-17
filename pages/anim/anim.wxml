@@ -1,6 +1,0 @@
-<!--pages/anim/anim.wxml-->
-<view class='anim-cantainer'>
- 
-   <view class='anim-text' animation="{{anim}}">lllllll
-  </view>
-</view>

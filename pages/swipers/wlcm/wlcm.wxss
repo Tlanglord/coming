@@ -1,0 +1,40 @@
+/* pages/swipers/wlcm/wlcm.wxss */
+
+.wlcm-img{
+  height: 100vh;
+  width: 100%;
+}
+
+.wlcm-img-1{
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 0px;
+  z-index: 2
+}
+
+.wlcm-c image{
+   display: block;
+}
+
+.wlcm-img-2{
+  width: 281px;
+  height: 281px;
+  position: absolute;
+  bottom: 10px;
+  left: 18%;
+  /* transform-origin: 50% 50%; */
+  animation: img2Animation 1.2s ease 0s infinite both;
+}
+@keyframes img2Animation{
+  0%{
+    /* width: 281px; */
+    /* height: 281px; */
+    transform: scale(1);
+  }
+  50%{
+    transform: scale(1.5);
+    /* width: 561px; */
+    /* height: 561px; */
+  }
+}

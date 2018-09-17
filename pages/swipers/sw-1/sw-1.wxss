@@ -1,0 +1,17 @@
+/* pages/swipers/sw-0/sw-0.wxss */
+
+.sw-1-img {
+  margin-left: 10%;
+  margin-right: 10%;
+  width: 80%;
+  height: 70%;
+}
+
+.sw-1-c {
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  color: rgb(66, 141, 174);
+  font-size: 24rpx;
+  line-height: 60rpx;
+}

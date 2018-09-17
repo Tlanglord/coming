@@ -1,0 +1,11 @@
+{
+  "component": true,
+  "usingComponents": {
+    "wlcm":"./../wlcm/wlcm",
+    "sw-1": "./../sw-1/sw-1",
+    "sw-2": "./../sw-2/sw-2",
+    "sw-3": "./../sw-3/sw-3",
+    "sw-4": "./../sw-4/sw-4",
+    "sw-9": "./../sw-9/sw-9"
+  }
+}
